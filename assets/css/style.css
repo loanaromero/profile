@@ -29,6 +29,11 @@ body {
   margin: 10px
 }
 
+.prof-box h3 {
+  text-align: center;
+  margin: 10px
+}
+
 .p-box h3 {
   font-size: 30px;
   margin: 25px;

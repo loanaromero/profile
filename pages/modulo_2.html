@@ -1,0 +1,39 @@
+<html>
+<head>
+  <title> Módulo 2 </title>
+</head>
+<body>
+  <div>
+    <h1> Formulario Módulo 2 </h1>
+    <h2>Ingrese dos valores a sumar y haga clic en el botón para obtener el resultado</h2>
+    <form>
+
+      <label for="texto"> Primer número: </label> <input name="n1" type="text" id="n1"/> <br> <br>
+      <label for="texto"> Segundo número: </label> <input name="n1" type="text" id="n2"/>   
+      <input name="suma" type="button" onClick="valor()" value="Sumar" /> <br> <br>
+      <label for="texto"> Resultado: </label> <input type="text" id="resultado" />
+
+    </form>
+    <script>
+      function valor() {
+      var n1 = document.getElementById("n1").value;
+      var n2 = document.getElementById("n2").value;
+      var resultado = parseFloat(n1) + parseFloat(n2);
+      document.getElementById("resultado").value = resultado;
+      }
+    </script>
+  </div>
+
+  <div class= "piepag">
+    <footer  style="width:100%; margin-left: 0px; text-align: center;">
+      <div class="copyright" style="background-color: rgba(221, 221, 221, 0.76)">
+          <div class="container-fluid" style="background-color: rgba(221, 221, 221, 0.76); color: #000000;">
+            Programación I - Universidad Nacional de Rafaela (2021)
+          </div>
+      </div>
+    </footer>
+    <h4 style= "text-align: center;"> <a href = "/index.html" > Volver a la página principal</a> </h4>
+  </div>
+
+</body>
+</html>
