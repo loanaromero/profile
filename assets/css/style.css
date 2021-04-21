@@ -200,3 +200,213 @@ footer {
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+.mod2form {
+  margin: 15px;
+}
+.mod2form h1 {
+  text-align: center;
+}
+
+.ej1 {
+  width: 290px;
+  background-color:rgba(192, 253, 213, 0.76);
+  margin: 10px;
+  text-align:left;
+  border-radius: 12px;
+  padding: 15px;
+  margin-left: 20px;
+  display:inline-block;
+  overflow: hidden;
+}
+
+.ej1 h2 {
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+.ej2 {
+  width: 290px;
+  background-color:rgba(192, 253, 250, 0.76);
+  margin: 10px;
+  text-align:left;
+  border-radius: 12px;
+  padding: 15px;
+  margin-left: 20px;
+  display:inline-block;
+  overflow: hidden;
+}
+
+.ej2 h2 {
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+.ej3 {
+  width: 290px;
+  background-color:rgba(229, 192, 253, 0.76);
+  margin: 10px;
+  text-align:left;
+  border-radius: 12px;
+  padding: 15px;
+  margin-left: 20px;
+  display:inline-block;
+  overflow: hidden;
+}
+
+.ej3 h2 {
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+.ej4 {
+  width: 290px;
+  background-color:rgba(253, 192, 217, 0.76);
+  margin: 10px;
+  text-align:left;
+  border-radius: 12px;
+  padding: 15px;
+  margin-left: 20px;
+  display:inline-block;
+  overflow: hidden;
+}
+
+.ej4 h2 {
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+.ej5 {
+  width: 290px;
+  background-color:rgba(253, 214, 192, 0.76);
+  margin: 10px;
+  text-align:left;
+  border-radius: 12px;
+  padding: 15px;
+  margin-left: 20px;
+  display:inline-block;
+  overflow: hidden;
+}
+
+.ej5 h2 {
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+.ej5 h5 {
+  font-family: sans-serif;
+}
+
+.ej6 {
+  width: 290px;
+  background-color:rgba(214, 253, 229, 0.76);
+  margin: 10px;
+  text-align:left;
+  border-radius: 12px;
+  padding: 15px;
+  margin-left: 20px;
+  display:inline-block;
+  overflow: hidden;
+}
+
+.ej6 h2 {
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+.ej6 h5 {
+  font-family: sans-serif;
+}
+
+.ej7 {
+  width: 290px;
+  background-color:rgba(210, 250, 248, 0.76);
+  margin: 10px;
+  text-align:left;
+  border-radius: 12px;
+  padding: 15px;
+  margin-left: 20px;
+  display:inline-block;
+  overflow: hidden;
+}
+
+.ej7 h2 {
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+.ej8 {
+  width: 290px;
+  background-color:rgba(236, 212, 252, 0.76);
+  margin: 10px;
+  text-align:left;
+  border-radius: 12px;
+  padding: 15px;
+  margin-left: 20px;
+  display:inline-block;
+  overflow: hidden;
+}
+
+.ej8 h2 {
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+.ej8 h5 {
+  font-family: sans-serif;
+}
+
+.ej9 {
+  width: 290px;
+  background-color:rgba(252, 212, 228, 0.76);
+  margin: 10px;
+  text-align:left;
+  border-radius: 12px;
+  padding: 15px;
+  margin-left: 20px;
+  display:inline-block;
+  overflow: hidden;
+}
+
+.ej9 h2 {
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+.ej9 h5 {
+  font-family: sans-serif;
+}
+
+.ej10 {
+  width: 290px;
+  background-color:rgba(255, 230, 215, 0.76);
+  margin: 10px;
+  text-align:left;
+  border-radius: 12px;
+  padding: 15px;
+  margin-left: 20px;
+  display:inline-block;
+  overflow: hidden;
+}
+
+.ej10 h2 {
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+.ej10 h5 {
+  font-family: sans-serif;
+}
+
+.Lista {
+  width: 100%;
+  margin: 0px 60px;
+}
+

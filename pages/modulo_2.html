@@ -1,29 +1,348 @@
 <html>
 <head>
   <title> Módulo 2 </title>
+  <link rel="stylesheet" type="text/css" href="/Profile C2/profile/assets/css/style.css">
+
 </head>
 <body>
-  <div>
+
+  <div class="mod2form">
     <h1> Formulario Módulo 2 </h1>
-    <h2>Ingrese dos valores a sumar y haga clic en el botón para obtener el resultado</h2>
-    <form>
-
-      <label> Primer número: </label> <input name="n1" type="text" id="n1"/> <br> <br>
-      <label> Segundo número: </label> <input name="n1" type="text" id="n2"/>   
-      <input name="suma" type="button" onClick="valor()" value="Sumar" /> <br> <br>
-      <label> Resultado: </label> <input type="text" id="resultado" />
-
-    </form>
-    <script>
-      function valor() {
-      var n1 = document.getElementById("n1").value;
-      var n2 = document.getElementById("n2").value;
-      var resultado = parseFloat(n1) + parseFloat(n2);
-      document.getElementById("resultado").value = resultado;
-      }
-    </script>
   </div>
 
+  <div class= "Lista">
+    <div class="ej1">
+      <h2>Ingrese dos valores a sumar y haga clic en el botón para obtener el resultado: </h2>
+      <form>
+        <label> Primer número: </label> <input name="n1" type="number" id="n1"/> <br> <br>
+        <label> Segundo número: </label> <input name="n2" type="number" id="n2"/>   
+        <input name="suma" type="button" onClick="valor()" value="Sumar" /> <br> <br>
+        <label> Resultado: </label> <input type="text" readonly id="resultado" />
+
+      </form>
+      <script>
+        function valor() {
+        var n1 = document.getElementById("n1").value;
+        var n2 = document.getElementById("n2").value;
+        var resultado = parseFloat(n1) + parseFloat(n2);
+        document.getElementById("resultado").value = resultado;
+        }
+      </script>
+    </div>
+
+    <div class="ej2">
+      <h2> Ingrese cuatro valores, haga clic en el botón para obtener el mayor y menor:</h2>
+
+      <label>N1:</label>
+      <input type="number" id="nro1"> <br> <br>
+      
+      <label>N2:</label>
+      <input type="number" id="nro2"> <br> <br>
+
+      <label>N3:</label>
+      <input type="number" id="nro3"> <br> <br>
+
+      <label>N4:</label>
+      <input type="number" id="nro4">
+
+      <button onclick="Comparacion()"> Comparar </button> <br> <br>
+
+      <label> Número mayor:</label> <br> 
+      <input type="number" id="mayor" readonly> <br> 
+
+      <label> Número menor:</label> <br> 
+      <input type="number" id="menor" readonly>
+  
+
+      <script>
+        function Comparacion() {
+          n1 = parseFloat(document.getElementById("nro1").value)
+          n2 = parseFloat(document.getElementById("nro2").value)
+          n3 = parseFloat(document.getElementById("nro3").value)
+          n4 = parseFloat(document.getElementById("nro4").value)
+
+          if (n1>=n2 && n1>=n3 && n1>=n4){
+            document.getElementById("mayor").value = n1
+          }
+          else{
+            if (n2>=n1 && n2>=n3 && n2>=n4){
+              document.getElementById("mayor").value = n2
+            }
+            else{
+              if (n3>=n1 && n3>=n2 && n3>=n4){
+                document.getElementById("mayor").value = n3
+              }
+              else{
+                document.getElementById("mayor").value = n4
+              }
+            }
+          }
+
+          if (n1<=n2 && n1<=n3 && n1<=n4){
+            document.getElementById("menor").value = n1
+          }
+          else{
+            if (n2<=n1 && n2<=n3 && n2<=n4){
+              document.getElementById("menor").value = n2
+            }
+            else{
+              if (n3<=n1 && n3<=n2 && n3<=n4){
+                document.getElementById("menor").value = n3
+              }
+              else{
+                document.getElementById("menor").value = n4
+              }
+            }
+          }
+        }
+      </script>
+    </div>  
+
+    <div class= "ej3">
+      <h2> Ingrese una palabra y el número de veces que desea repetirla, haga clic en el botón para ejecutarlo:</h2>
+
+      <label for="palabra"> Palabra: </label>
+      <input type="text" id= "palabra"> <br> <br>
+
+      <label for="repeticion"> Número: </label>
+      <input type="number" id= "repeticion"> <br> <br>
+
+      <button onclick= "Repetir()"> Repetir </button> <br> <br>
+
+      <label for="resultado"> Resultado: </label>
+      <input type="text" readonly id="resultadorep"> 
+
+
+      <script>
+        function Repetir() {
+          numero= parseInt(document.getElementById("repeticion").value);
+          palabra= document.getElementById("palabra").value; 
+
+          palabras= " "
+
+          for (i= 0; i<numero; i++) {
+            palabras= palabras + palabra
+            console.log(palabras)
+          }
+          document.getElementById("resultadorep"). value = palabras
+        }
+      </script>
+    </div>
+
+    <div class= "ej4">
+      <h2> Conversor de temperatura:</h2>
+
+      <label> Grados Celsius (ºC): </label> <br> 
+      <input type="number" id= "celsius"> <br> <br>
+      
+      <label> Grados Fahrenheit (ºF): </label> <br> 
+      <input type="number" id= "fahrenheit"> <br> <br>
+      
+    
+      <button onclick="Convertir()"> Convertir </button> 
+      <button onclick="Limpiar()"> Limpiar </button>
+    
+      <script>
+        function Convertir() {
+          gcelsius = document.getElementById("celsius").value;
+          gfahrenheit = document.getElementById("fahrenheit").value;
+    
+          if (gcelsius == "" && gfahrenheit != "") {
+            document.getElementById("celsius").value = (parseFloat(gfahrenheit) - 32) * (5/9)
+          } else {
+              if (gcelsius != "" && gfahrenheit == "") {
+                document.getElementById("fahrenheit").value = (parseFloat(gcelsius) * (9/5)) + 32
+              } else {
+                alert("Ingrese la temperatura que desea convertir")
+              }
+            }
+        }
+    
+        function Limpiar(){
+          document.getElementById("celsius").value = " "
+          document.getElementById("fahrenheit").value = " "
+        }
+      </script>
+
+    </div>
+
+    <div class= "ej5">
+      <h2> Ingrese una palabra:</h2>
+
+      <label> Palabra: </label>
+      <input type="text" id= "palab"> <br> <br>
+
+      <button onclick= "Contar()"> Contar letras </button> <br>
+
+      <h5 id="contar_letras"></h5>
+
+      <script>
+        function Contar(){
+
+          palabing = document.getElementById("palab").value;
+          c_letras = palabing.length;
+
+          document.getElementById("contar_letras").innerText = "La palabra " + palabing + " tiene " + parseFloat(c_letras) + " letras.";
+        }
+      </script>
+    </div>
+  </div>
+
+  <div class= "Lista">
+    <div class= "ej6">
+      <h2> Ingrese un número para verificar si es par:</h2>
+
+      <label> Nº: </label>
+      <input type="number" id= "numing"> <br> <br>
+
+      <button onclick= "Verificar()"> Verificar </button> <br>
+
+      <h5 id="verificacion"></h5>
+
+      <script>
+          function Verificar() {
+              verif = document.getElementById("numing").value;
+
+              if (parseInt(verif) % 2 == 0) {
+                  document.getElementById("verificacion").innerText = "El número ingresado es par"
+              } else {
+                  document.getElementById("verificacion").innerText = "El número ingresado es impar"
+              }
+          }
+      </script>
+    </div>
+
+    <div class= "ej7">
+      <h2> Múltiplos de 3 entre 1 y 20:</h2> <br>
+
+      <button onclick= "Multiplos()"> Mostrar </button>  
+      <input id= "multiplos" readonly size= "20">
+
+      <script>
+        function Multiplos(){
+
+          document.getElementById("multiplos").value= ""
+          texto = ""
+
+          for (i = 1; i <= 20; i++){
+            if(i%3 == 0){
+              texto = texto + i + ", "
+            }
+          }
+
+          document.getElementById("multiplos").value = texto.slice(0,-2)
+        }
+      </script>
+    </div>
+    <div class= "ej8">
+      <h2> Números primos del valor ingresado:</h2> <br>
+      <label> Ingrese el número: </label> <br>
+      <input id="numej8">
+
+      <button onclick="MostrarP()"> Mostrar </button>
+      <h5></h5>
+      <h5 id="res_ej8_2"></h5>
+
+      <script>
+          function MostrarP() {
+              num = document.getElementById("numej8").value;
+              cont_ej8 = 0;
+              cad_ej8 = "";
+
+              for (m = 2; m < parseInt(num); m++) {
+
+                  for (i = 2; i < m; i++) {
+                      if (m % i == 0) {
+                          cont_ej8 = cont_ej8 + 1;
+                      }
+                  }
+
+                  if (parseInt(cont_ej8) == 0) {
+                      cad_ej8 = cad_ej8 + m + "; "
+                  }
+                  cont_ej8 = 0
+              }
+
+              document.getElementById("res_ej8_2").innerText = cad_ej8
+          }
+      </script>
+    </div>
+
+    <div class= "ej9">
+      <h2> Complete con lo pedido:</h2> <br>
+
+      <label> Nombre:</label> 
+      <input id="nomej9"> <br> <br>
+    
+      <label> Apellido:</label> 
+      <input id="apeej9"> <br> <br>
+
+      <label> Edad:</label> 
+      <input id="edaej9"> <br> <br>
+
+      <label> Ciudad de Nacimiento:</label> 
+      <input id="ciuej9"> <br> <br>
+
+      <button onclick="Armado()"> Armar frase </button>
+    
+      <h5 id="respej9"></h5>
+
+      <script>
+          function Armado() {
+              nomej9 = document.getElementById("nomej9").value;
+              apeej9 = document.getElementById("apeej9").value;
+              edaej9 = document.getElementById("edaej9").value;
+              ciuej9 = document.getElementById("ciuej9").value;
+
+              document.getElementById("respej9").innerText = "Mi nombre es " + nomej9 + " " + apeej9 + ", tengo " + edaej9 + " años. Nací en la ciudad de " + ciuej9 + "."
+          }
+      </script>
+    </div>
+
+    <div class= "ej10">
+
+      <h2> Ingrese dos números enteros:</h2> <br>
+
+      <label> Nº 1: </label>
+      <input id="num1ej10"> <br> <br>
+
+      <label> Nº 2: </label>
+      <input id="num2ej10"> <br> <br>
+
+
+      <button onclick="Completar()"> Completar</button>
+    
+      <h5 id="res_ej10"></h5>
+
+      <script>
+          function Completar() {
+            num1ej10 = document.getElementById("num1ej10").value;
+            num2ej10 = document.getElementById("num2ej10").value;
+            serie = ""
+
+            if (parseInt(num1ej10) == parseInt(num2ej10)) {
+              alert("Los números no pueden ser iguales, vuelva a ingresarlos.")
+              document.getElementById("num1ej10").value = ""
+              document.getElementById("num2ej10").value = ""
+            } else {
+              if (parseInt(num1ej10) < parseInt(num2ej10)) {
+                dif = parseInt(num2ej10) - parseInt(num1ej10)
+                for (i = 1; i < parseInt(dif); i++) {
+                  serie = serie + (parseInt(num1ej10) + parseInt(i)) + "; "
+                }
+              } else {
+                  dif = parseInt(num1ej10) - parseInt(num2ej10)
+                  for (i = 1; i < parseInt(dif); i++) {
+                    serie = serie + (parseInt(num2ej10) + parseInt(i)) + "; "
+                  }
+                }
+                document.getElementById("res_ej10").innerText = "Los números entre estos son: " + serie
+
+              }
+          }
+      </script>
+    </div>
+  </div>
 
   <div>
     <footer  style="width:100%; margin-left: 0px; text-align: center;">
@@ -35,7 +354,7 @@
     </footer>
   </div>
 
-  <h4 style= "text-align: center; padding: 5px;"> <a href= "https://loanaromero.github.io/profile/"> Volver a la página principal </a> </h4>
+  <h4 style= "text-align: center; padding: 5px; margin: 50px;"> <a href= "https://loanaromero.github.io/profile/"> Volver a la página principal </a> </h4>
 
 </body>
 </html>
